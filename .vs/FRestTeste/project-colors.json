@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "0b648311-837c-4b39-a1a0-5aa91dafb3f1": {
+      "ProjectGuid": "0b648311-837c-4b39-a1a0-5aa91dafb3f1",
+      "DisplayName": "FRestTeste.Financeiro",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Arquivos Diversos",
+      "ColorIndex": -1
+    },
+    "6d9c94d4-6494-45c0-af22-7f24662b35c4": {
+      "ProjectGuid": "6d9c94d4-6494-45c0-af22-7f24662b35c4",
+      "DisplayName": "FRestTeste.infra.Data",
+      "ColorIndex": 1
+    },
+    "74c97260-bdd8-4c21-a6af-1ad213b3091c": {
+      "ProjectGuid": "74c97260-bdd8-4c21-a6af-1ad213b3091c",
+      "DisplayName": "FRestTeste.infra.Reports",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

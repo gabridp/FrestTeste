@@ -1,0 +1,81 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home</title>
+
+    <!-- referência para os arquivos CSS do projeto -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+</head>
+<body>
+
+    <!-- menu superior -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Financeiro FRest</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" 
+                id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" 
+                        href="/Home/Index">Página inicial</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gerenciar Relatórios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/Receita/ReceitaResumo">Relatorio Receitas</a></li>
+                            <li><a class="dropdown-item" href="#">
+                                Consultar Eventos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">
+                                Relatório de Eventos</a></li>
+                            </ul>
+                        </li>
+                </ul>
+                <form class="d-flex">
+                    <a href="/Account/Login" class="btn btn-outline-light"
+                        onclick="return confirm('Deseja realmente encerrar sua sessão e sair do sistema?');">
+                        Encerrar Sessão
+                    </a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- mensagem de sucesso -->
+    @if (TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show"
+            role="alert">
+            <strong>Sucesso!</strong> @TempData["MensagemSucesso"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" 
+                aria-label="Close"></button>
+        </div>
+    }
+
+    <!-- corpo da página -->
+    <div class="container mt-3">
+        <div class="card card-body">
+            @* Local onde será exibido o conteúdo das demais páginas *@
+             @RenderBody()
+        </div>
+    </div>
+
+    <!-- arquivos do tipo javascript -->
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
+
